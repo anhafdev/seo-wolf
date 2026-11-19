@@ -4,6 +4,11 @@ All notable changes to SEO Wolf are listed here. The format follows [Keep a Chan
 
 ## [Unreleased]
 
+### Changed
+
+- README redesigned with the hexagon wolf logo, a recorded crawl demo, a feature comparison matrix, FAQ and a one-line pipx install
+- CI actions updated to checkout v7 and setup-python v7
+
 ## [0.1.0] - 2026-11-20
 
 ### Added

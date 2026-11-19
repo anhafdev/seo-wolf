@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">SEO Wolf logo · crafted by @anhafxd</title>
+  <defs>
+    <clipPath id="left-half"><rect x="0" y="0" width="120" height="240"/></clipPath>
+    <clipPath id="right-half"><rect x="120" y="0" width="120" height="240"/></clipPath>
+    <polygon id="head" points="68,44 100,82 120,74 140,82 172,44 178,98 190,128 182,150 156,168 138,186 120,200 102,186 84,168 58,150 50,128 62,98"/>
+  </defs>
+  <polygon points="120,10 215,65 215,175 120,230 25,175 25,65" fill="#121829" stroke="#2F6BFF" stroke-width="5" stroke-linejoin="round"/>
+  <polygon points="120,22 205,71 205,169 120,218 35,169 35,71" fill="none" stroke="#1F2740" stroke-width="2"/>
+  <use href="#head" fill="#2F6BFF" clip-path="url(#left-half)"/>
+  <use href="#head" fill="#E8ECF4" clip-path="url(#right-half)"/>
+  <polygon points="74,58 95,84 80,92" fill="#1D47B8"/>
+  <polygon points="166,58 145,84 160,92" fill="#B7C0D3"/>
+  <g fill="none" stroke="#0A0E1A" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="62,98 100,112 120,104 140,112 178,98"/>
+    <polyline points="120,74 120,104"/>
+    <polyline points="50,128 84,132 58,150"/>
+    <polyline points="190,128 156,132 182,150"/>
+    <polyline points="84,168 100,142 112,170 120,166 128,170 140,142 156,168"/>
+    <polyline points="100,142 120,136 140,142"/>
+  </g>
+  <polygon points="82,121 108,126 97,134" fill="#E5383B"/>
+  <polygon points="158,121 132,126 143,134" fill="#0A0E1A"/>
+  <polygon points="110,174 130,174 120,186" fill="#0A0E1A"/>
+  <use href="#head" fill="none" stroke="#0A0E1A" stroke-width="3" stroke-linejoin="round"/>
+</svg>
