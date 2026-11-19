@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /private/
+Allow: /private/allowed.html
+
+User-agent: seowolf
+Disallow: /private/
+Crawl-delay: 0
+
+Sitemap: __ORIGIN__/sitemap.xml
