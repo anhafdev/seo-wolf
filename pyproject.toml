@@ -1,0 +1,93 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "seowolf"
+dynamic = ["version"]
+description = "Self-hosted open-source SEO crawler and site auditor: unlimited URLs, saved crawls, technical SEO and AI-search readiness."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{ name = "F. ANHAF DEV", email = "founder@anhaf.dev" }]
+maintainers = [{ name = "F. ANHAF DEV", email = "founder@anhaf.dev" }]
+keywords = [
+  "seo",
+  "seo-audit",
+  "technical-seo",
+  "site-audit",
+  "web-crawler",
+  "sitemap",
+  "robots-txt",
+  "geo",
+  "aeo",
+  "self-hosted",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking",
+]
+dependencies = [
+  "httpx[http2]>=0.27",
+  "selectolax>=1.0",
+  "sqlalchemy[asyncio]>=2.0.30",
+  "aiosqlite>=0.20",
+  "alembic>=1.13",
+  "typer>=0.12",
+  "rich>=13.7",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "pyyaml>=6.0",
+  "yarl>=1.9",
+]
+
+[project.optional-dependencies]
+render = ["playwright>=1.44"]
+postgres = ["asyncpg>=0.29"]
+google = ["google-auth>=2.29", "google-auth-oauthlib>=1.2"]
+all = ["seowolf[render,postgres,google]"]
+dev = ["pytest>=8.2", "pytest-asyncio>=0.23", "respx>=0.21", "ruff>=0.5"]
+
+[project.scripts]
+seowolf = "seowolf.cli.app:run"
+
+[project.urls]
+Homepage = "https://github.com/anhafdev/seo-wolf"
+Repository = "https://github.com/anhafdev/seo-wolf"
+Issues = "https://github.com/anhafdev/seo-wolf/issues"
+Changelog = "https://github.com/anhafdev/seo-wolf/blob/main/CHANGELOG.md"
+Author = "https://anhaf.dev"
+Telegram = "https://t.me/anhafxd"
+
+[tool.hatch.version]
+path = "seowolf/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["seowolf"]
+
+[tool.hatch.build.targets.sdist]
+include = ["seowolf", "tests", "README.md", "LICENSE", "CHANGELOG.md", "alembic.ini"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "ASYNC"]
+
+[tool.ruff.lint.per-file-ignores]
+"seowolf/crawler/guarded_transport.py" = ["ASYNC109"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
