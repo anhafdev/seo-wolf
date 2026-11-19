@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest a check, report or workflow for SEO Wolf
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to find or fix on a site?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: How SEO Wolf could help. Link official documentation if a rule is involved.
